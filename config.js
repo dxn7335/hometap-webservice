@@ -33,11 +33,12 @@ const applyConfig = (app) => {
   });
 
   // Mocking data for dev purposes
+  // Intercept outbound calls and use the path to return correct mock data
   if (process.env.ENVIRONMENT === 'dev') {
-    // Intercept outbound calls and use the path to return correct mock data
     axios.interceptors.request.use(req => {
       const url = new URL(req.url);
       const routepath = url.pathname.split('/v2/')[1];
+      // track and change url of outbound call
       return {
           ...req,
           url: `/mocks/${routepath}/`,
