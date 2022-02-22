@@ -6,7 +6,7 @@ I don't have much expertise with python based service work so I opted for using 
 
 An added benefit would be that since the language usage between the frontend and this service layer will be similar in most cases, there is a cross over of skill.
 
-In addition a project setup can be made to run both the front end application and this node service layer locally in tandem on different ports, allowing for easier development.
+In addition, a project setup can be made to run both the front end application and this node service layer locally in tandem on different ports, allowing for easier development.
 
 ## Dependencies
 - Express
