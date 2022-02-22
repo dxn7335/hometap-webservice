@@ -6,7 +6,7 @@ I don't have much expertise with python based service work so I opted for using 
 
 An added benefit would be that since the language usage between the frontend and this service layer will be similar in most cases, there is a cross over of skill.
 
-In addition a project setup can be made to run both the front end application and this node service layer in tandem on different ports, allowing for easier development.
+In addition a project setup can be made to run both the front end application and this node service layer locally in tandem on different ports, allowing for easier development.
 
 ## Dependencies
 - Express
@@ -26,9 +26,10 @@ In addition a project setup can be made to run both the front end application an
 (this is setup in a small script made in index page template in the `/views` directory)
 
 
+
 ## Discussion
 
-A difficult decision was needed to be made on how abstract to create the api that needed some more context on the page that was needing the informatiom from House Canary.
+A difficult decision was needed to be made on how abstract to create the api which needed some more context on the page needing the information from House Canary.
 
 `Task: New feature: The web app should prompt homeowners with an additional question if we believe their home has a septic system`
 
@@ -66,5 +67,5 @@ Because of the lack of context on what the frontend page that will be using this
 
 
 ## Next steps
-- An actual front end can be created to run in tandem with this Node API so that more legitimate real-time testing can be done.
+- An actual front end can be created to run in tandem with this Node API so that more actual use-case, real-time testing can be done.
 - Swagger documentation on the API calls
