@@ -4,7 +4,7 @@ block scripts
   script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js')
   script.
     window.addEventListener('load', function() {
-      axios.get('/property/details', { 
+      axios.get('/property/details/hasSeptic', { 
           params: {
             address: '123 Main St',
             zipcode: 65432

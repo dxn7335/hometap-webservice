@@ -1,23 +1,26 @@
 const axios = require('axios');
 
-/* All Property Details */
-const detailController = (req, res, next) => {
-  const { query } = req;
-  const { address, zipcode } = query;
-
+/**
+ * Outbound House Canary API details call
+ * @param {object} params
+ * @param {string} params.address
+ * @param {string} params.zipcode
+ * @param {Express Response} res
+ * @return {Promise}
+ */
+const apiRequest = ({ address, zipcode }, res) => {
   if (address && zipcode) {
     const addressString = address.replace(/\s/g, '+');
-    axios
+    return axios
       .get(`https://api.housecanary.com/v2/property/details?address=${addressString}&zipcode=${zipcode}`)
       .then((resp) => {
         // parsing logic specific to House Canary API
         const propertyDetails = resp.data['property/details'].result;
-        res.send(propertyDetails);
+        return Promise.resolve(propertyDetails);
       });
-
   } else {
     res.status('400').json({ message: 'Address and Zipcode required'});
   }
-};
+}
 
-module.exports = detailController;
+module.exports = apiRequest;
