@@ -1,7 +1,7 @@
 const apiRequest = require('./api');
 
 /* 
-  Property Details
+  Property Details - All details
   ================
   Queries: (should be documented in swagger)
 

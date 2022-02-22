@@ -1,7 +1,7 @@
 const apiRequest = require('./api');
 
 /* 
-  Property Details
+  Property Details - Septic Information
   ================
   Queries: (should be documented in swagger)
 
